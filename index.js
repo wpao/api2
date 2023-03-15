@@ -1,9 +1,9 @@
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 4000;
 // //
-const blogRoutes = require('./src/routes/blog');
+// const blogRoutes = require('./src/routes/blog');
 // const multer = require('multer')
 const path = require('path')
 
@@ -29,14 +29,14 @@ const path = require('path')
 // }
 
 // corse police
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*')
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS')
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization')
-    next()
-})
+// app.use((req, res, next) => {
+//     res.setHeader('Access-Control-Allow-Origin', '*')
+//     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS')
+//     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+//     next()
+// })
 
-app.use(bodyParser.json()) //type JSON
+// app.use(bodyParser.json()) //type JSON
 app.use('/images', express.static(path.join(__dirname, 'images')))
 // app.use(multer({ storage: fileStorage, fileFilter }).single('image'))
 
