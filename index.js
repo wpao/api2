@@ -5,7 +5,7 @@ const port = process.env.PORT || 4000;
 // //
 // const blogRoutes = require('./src/routes/blog');
 // const multer = require('multer')
-const path = require('path')
+// const path = require('path')
 
 // setup file storage
 // const fileStorage = multer.diskStorage({
@@ -37,7 +37,7 @@ const path = require('path')
 // })
 
 // app.use(bodyParser.json()) //type JSON
-app.use('/images', express.static(path.join(__dirname, 'images')))
+// app.use('/images', express.static(path.join(__dirname, 'images')))
 // app.use(multer({ storage: fileStorage, fileFilter }).single('image'))
 
 app.use('/v1/blog', blogRoutes);
