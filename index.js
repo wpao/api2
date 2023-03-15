@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 4000;
 // //
-// const blogRoutes = require('./src/routes/blog');
+const blogRoutes = require('./src/routes/blog');
 // const multer = require('multer')
 // const path = require('path')
 
