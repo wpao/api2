@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 4000;
 // //
-const blogRoutes = require('./src/routes/blog');
+// const blogRoutes = require('./src/routes/blog');
 // const multer = require('multer')
 // const path = require('path')
 
@@ -40,15 +40,15 @@ const blogRoutes = require('./src/routes/blog');
 // app.use('/images', express.static(path.join(__dirname, 'images')))
 // app.use(multer({ storage: fileStorage, fileFilter }).single('image'))
 
-app.use('/v1/blog', blogRoutes);
-app.use('/paozan', (req, res) => res.send("selamat datang Tuan"))
+// app.use('/v1/blog', blogRoutes);
+// app.use('/paozan', (req, res) => res.send("selamat datang Tuan"))
 
 
 
 // // ini adalah baris default
-// app.get("/", (req, res) => res.send("Hello world"));
-// app.get("/ping", (req, res) => res.send("Pong"));
-// app.get("/felix", (req, res) => res.send("Liawi"));
+app.get("/", (req, res) => res.send("Hello world"));
+app.get("/paozan", (req, res) => res.send("pubg"));
+app.get("/wadi", (req, res) => res.send("call of duty"));
 
 // listen
 app.listen(port, () => console.log(`Server is listening on port ${port}`));
