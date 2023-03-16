@@ -4,6 +4,9 @@ const port = process.env.PORT || 3000;
 const path = require('path')
 const mongoose = require('mongoose');
 
+// http masuk ke https
+// <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+
 //
 const dataAuth = require('./src/routes/auth');
 const blogRoutes = require('./src/routes/blog');
