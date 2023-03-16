@@ -14,7 +14,7 @@ const blogRoutes = require('./src/routes/blog');
 
 //
 app.use('/images', express.static(path.join(__dirname, 'images')))
-app.use('/v1/auth', dataAuth);
+// app.use('/v1/auth', dataAuth);
 app.use('/v1/blog', blogRoutes);
 
 //
