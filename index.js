@@ -14,8 +14,8 @@ const blogRoutes = require('./src/routes/blog');
 
 //
 app.use('/images', express.static(path.join(__dirname, 'images')))
-// app.use('/v1/auth', dataAuth);
-app.use('/v1/blog', blogRoutes);
+app.use('/v1/auth', dataAuth);
+// app.use('/v1/blog', blogRoutes);
 
 //
 app.get("/", (req, res) => res.send("Selamat Datang Tuan"));
