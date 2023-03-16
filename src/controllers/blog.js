@@ -1,6 +1,15 @@
 const BlogPost = require('../models/blog')
 
 exports.getAllBlogPost = (req, res, next) => {
+    // const result = {
+    //     message: 'data all',
+    //     data: {
+    //         uid: 1,
+    //         name: 'brendan',
+    //         hoby: 'games'
+    //     }
+    // }
+    // res.json(result)
     const currentPage = parseInt(req.query.page) || 1
     const perPage = parseInt(req.query.perPage) || 5
     let totalItems
@@ -14,7 +23,7 @@ exports.getAllBlogPost = (req, res, next) => {
                 .limit(perPage)
         })
         .then(result => {
-            res.status(200).json({
+            res.json({
                 message: 'Data Blog Post Berhasil dipanggil',
                 data: result,
                 total_data: totalItems,
