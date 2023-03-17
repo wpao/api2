@@ -1,15 +1,6 @@
 const BlogPost = require('../models/blog')
 
 exports.getAllBlogPost = (req, res, next) => {
-    // const result = {
-    //     message: 'data all',
-    //     data: {
-    //         uid: 1,
-    //         name: 'brendan',
-    //         hoby: 'games'
-    //     }
-    // }
-    // res.json(result)
     const currentPage = parseInt(req.query.page) || 1
     const perPage = parseInt(req.query.perPage) || 5
     let totalItems
