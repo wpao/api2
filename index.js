@@ -24,7 +24,8 @@ app.get("/wadi", (req, res) => res.send("call of duty"));
 
 // mongoose
 const uri = 'mongodb+srv://paozan:22M.Mongodb.com@cluster0.vxbza3t.mongodb.net/blog?retryWrites=true&w=majority'
-mongoose.connect(uri)
+// const uri = 'mongodb+srv://paozan:22M.Mongodb.com@cluster0.vxbza3t.mongodb.net/?retryWrites=true&w=majority'
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         app.listen(port, () => console.log(`Server is listening on port ${port}`));
     })
